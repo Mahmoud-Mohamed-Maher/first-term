@@ -14,5 +14,12 @@ seq=SQ.AASequence.fromString("VAKA")
 
 total=seq.getMonoWeight()
 print(total)
+
+
+
+
 #mass of VAKA != mass of V + mass of A + mass of K + mass of A
 387.2481710527 != 441.2798662441
+
+
+
