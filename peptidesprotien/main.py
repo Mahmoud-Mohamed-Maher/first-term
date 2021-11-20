@@ -1,4 +1,6 @@
+
 #AminoAcidSequences
+
 from pyopenms import *
 seq = AASequence.fromString("DFPIANGER")
 prefix = seq.getPrefix(4)
@@ -16,7 +18,12 @@ print()
 print("monoisotopic mass of peptide[m]is", mfull)
 print("monoisotopic mass of peptide precursor [M+2H]2+ is", mprecursor)
 print("monoisotopic m/z of [M+2H]2+ is", mz)
+
+
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
 #peptideDFPIANGER
 seq = AASequence.fromString("DFPIANGER")
 
