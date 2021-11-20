@@ -20,11 +20,13 @@ print("monoisotopic mass of peptide precursor [M+2H]2+ is", mprecursor)
 print("monoisotopic m/z of [M+2H]2+ is", mz)
 
 
-#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#************************************************************************
+#************************************************************************
 
 
 
 #peptideDFPIANGER
+
 seq = AASequence.fromString("DFPIANGER")
 
 print("The peptide", str(seq), "consists of the following amino acids:")
@@ -40,16 +42,30 @@ for a in seq:
             print(aa.getName(), ":", aa.getMonoWeight(), ":", aa.getModificationName())
         else:
             print(aa.getName(), ":", aa.getMonoWeight())
+            
+#************************************************************************
+#************************************************************************
+            
             #Molecular formula
+            
             seq = AASequence.fromString("DFPIANGER")
             seq_formula = seq.getFormula()
             print("Peptide", seq, "has molecular formula", seq_formula)
+           
+#************************************************************************
+#************************************************************************
+
                 #Isotope patterns
 
             coarse_isotopes = seq_formula.getIsotopeDistribution(CoarseIsotopePatternGenerator(6))
             for iso in coarse_isotopes.getContainer():
                 print("Isotope", iso.getMZ(), "has abundance", iso.getIntensity() * 100, "%")
+                
+#************************************************************************
+#************************************************************************              
+               
                 #Fragment ions
+        
                 suffix = seq.getSuffix(3)
                 print("=" * 35)
                 print("y3 ion sequence:", suffix)
@@ -59,7 +75,12 @@ for a in seq:
                 suffix.getMonoWeight(Residue.ResidueType.BIon, 2) / 2.0
                 print("y3 mz:", suffix.getMonoWeight(Residue.ResidueType.YIon, 2) / 2.0)
                 print("y3 molecular formula:", y3_formula)
+                
+#************************************************************************
+#************************************************************************
+
                 #Modified Sequences
+    
                 seq = AASequence.fromString("PEPTIDESEKUEM(Oxidation)CER")
                 print(seq.toUnmodifiedString())
                 print(seq.toString())
