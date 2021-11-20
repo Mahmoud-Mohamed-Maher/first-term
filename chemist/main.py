@@ -1,4 +1,6 @@
+
 #element
+
 from pyopenms import *
 ed = ElementDB()
 
@@ -20,8 +22,14 @@ isotopes = sulfur.getIsotopeDistribution()
 
 print ("One mole of oxygen weigh", 2*oxygen.getAverageWeight(), "gram")
 print ("One mole of 16O2 weigh", 2*oxygen.getMonoWeight(), "gram")
+
+
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
 #isotopes
+
 methanol = EmpiricalFormula("CH3OH")
 ethanol = EmpiricalFormula("CH2") + methanol
 print("fine isotope distribution:")
@@ -30,8 +38,14 @@ prob_sum = sum([iso.getIntensity() for iso in isotopes.getContainer()])
 print("Thiscovers", prob_sum, "probability")
 for iso in isotopes.getContainer():
     print ("isotope", iso.getMZ(), "hasabundance", iso.getIntensity()*100, "%")
+    
+    
     #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    #amino acids
+    
+    
+    
+    #amino acids  
+    
     lys = ResidueDB().getResidue("lysine")
     print(lys.getName())
     print(lys.getThreeLetterCode())
@@ -40,7 +54,11 @@ for iso in isotopes.getContainer():
     print(lys.getMonoWeight())
     print(lys.getPka())
     print(lys.getFormula().toString())
+    
+    
+    
     #amino acid modifications
+    
     ox = ModificationsDB().getModification("Oxidation")
     print(ox.getUniModAccession())
     print(ox.getUniModRecordId())
@@ -49,7 +67,11 @@ for iso in isotopes.getContainer():
     print(ox.getFullId())
     print(ox.getFullName())
     print(ox.getDiffFormula())
+    
+    
+    
     #ribonucleotides
+    
     uridine = RibonucleotideDB().getRibonucleotide(b"U")
     print(uridine.getName())
     print(uridine.getCode())
