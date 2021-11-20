@@ -56,6 +56,8 @@ for iso in isotopes.getContainer():
     print(lys.getFormula().toString())
     
     
+        #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
     
     #amino acid modifications
     
@@ -69,6 +71,8 @@ for iso in isotopes.getContainer():
     print(ox.getDiffFormula())
     
     
+        #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
     
     #ribonucleotides
     
