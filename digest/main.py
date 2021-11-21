@@ -20,7 +20,11 @@ len(names)
 e = ProteaseDB().getEnzyme('Lys-C')
 e.getRegExDescription()
 e.getRegEx()
-#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+#************************************************************************
+#************************************************************************
+
 from urllib.request import urlretrieve
 gh = "https://raw.githubusercontent.com/OpenMS/pyopenms-extra/master"
 urlretrieve (gh + "/src/data/P02769.fasta", "bsa.fasta")
@@ -33,7 +37,14 @@ result = []
 dig.digest(bsa, result)
 print(result[4].toString())
 len(result)
+
+#************************************************************************
+#************************************************************************
+
+
 #oligonucleotide digestion
+
+
 db = RNaseDB()
 names = []
 db.getAllNames(names)
