@@ -1,1 +1,1 @@
-# tasks-solutions
+# three-tasks-solutions
